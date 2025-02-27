@@ -16,7 +16,7 @@ struct StoreContainerView: View {
             HStack{
                 Text(viewModel.title)
                     .font(.headline)
-                    .padding(20)
+                    .padding(10)
                     .foregroundStyle(Color.accent)
                     .bold()
                 Spacer()
@@ -77,7 +77,7 @@ struct StoreContainerView: View {
         .foregroundStyle(colorScheme == .dark ? .white : .black)
         
      }
-        .padding(20)
+        .padding(10)
     }
 }
 

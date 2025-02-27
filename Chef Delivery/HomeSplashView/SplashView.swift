@@ -73,7 +73,7 @@ struct SplashView: View {
         }
     
         .fullScreenCover(isPresented: $viewModel.isActive){
-            HomeView()
+            LoginScreen()
                 
         }
     }

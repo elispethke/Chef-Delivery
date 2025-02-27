@@ -14,7 +14,7 @@ class SplashViewModel: ObservableObject{
      startSplashTime()
     }
     func startSplashTime() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
             withAnimation(.easeInOut(duration: 1)){
                 self.isActive = true
             }

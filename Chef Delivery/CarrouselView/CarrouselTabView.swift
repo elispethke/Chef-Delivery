@@ -18,7 +18,7 @@ struct CarrouselTabView: View {
                     .tag(mock.id)
             }
         }
-        .frame(height: 420)
+        .frame(height: 320)
         .tabViewStyle(.page(indexDisplayMode: .always))
         .onAppear{
             Timer.scheduledTimer(withTimeInterval: 2, repeats: true) { _ in
