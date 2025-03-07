@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseAuth
 
 struct LoginScreen: View {
     @State private var email: String = ""
@@ -13,34 +14,39 @@ struct LoginScreen: View {
     @State private var isSignUpActive = false
     @State private var isPasswordVissible: Bool = false
     @FocusState private var emailFieldsFocused: Bool
+    @State private var goToHomeView: Bool = false
+    @State private var showError: Bool = false
+    @State private var errorMessage: String = ""
+    
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-       
-            NavigationStack{
-                ZStack{
-                    Color.fundo
-                        .edgesIgnoringSafeArea(.all)
-                        .opacity(0.5)
-                    
-                    ScrollView(showsIndicators: false){
+        
+        NavigationStack{
+            ZStack{
+                Color.fundo
+                    .edgesIgnoringSafeArea(.all)
+                    .opacity(0.7)
+                
+                ScrollView(showsIndicators: false){
                     VStack{
                         Image("LoginLogo")
                             .resizable()
                             .scaledToFit()
                         
-                       Spacer()
+                        Spacer()
                         
                     }
                     
-
-                        VStack(alignment: .center, spacing: 20){
+                    VStack(alignment: .center, spacing: 20){
                         TextField("Email", text: $email)
                             .padding()
                             .background(Color.grayClaro.opacity(0.7))
                             .cornerRadius(10)
                             .textInputAutocapitalization(.never)
                             .disableAutocorrection(true)
-                            .foregroundStyle(Color.myBlack)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
+                        
                         
                         ZStack{
                             
@@ -56,7 +62,7 @@ struct LoginScreen: View {
                             .padding()
                             .background(Color.grayClaro.opacity(0.7))
                             .cornerRadius(10)
-                            .foregroundColor(.myBlack)
+                            .foregroundColor(colorScheme == .dark ? .white : .black)
                             
                             HStack{
                                 Spacer()
@@ -73,7 +79,7 @@ struct LoginScreen: View {
                         }
                         
                         Button(action: {
-                            //
+                            goToHomeView = true
                         }) {
                             Text("Enter")
                                 .frame(maxWidth: .infinity)
@@ -85,6 +91,12 @@ struct LoginScreen: View {
                         }
                         .buttonStyle(PlainButtonStyle())
                         .padding(.top,20)
+                        
+                        NavigationLink(destination: HomeView(), isActive: $goToHomeView) {
+                            EmptyView()
+                        }
+                        
+                        
                         
                         HStack{
                             Text("Don't have a account?")
@@ -99,19 +111,62 @@ struct LoginScreen: View {
                                     .padding(.leading,20)
                                     .padding(.top,30)
                             }
-                           
-
+                            
                         }
                     }
                     .padding()
                     .padding(.top, 10)
                 }
             }
-            
-            
-            
+            .navigationBarBackButtonHidden(true)
+            .alert(isPresented: $showError) {
+                Alert(title: Text("Error"), message: Text(errorMessage), dismissButton: .default(Text("OK")))
+            }
         }
     }
+    
+    // func for Authentication on Firebase
+    
+    func signIn() {
+        Auth.auth().signIn(withEmail: email, password: password) { result, error in
+            
+            if let error = error {
+                // If an error occurs, it displays the alert
+                errorMessage = error.localizedDescription
+                showError = true
+            } else if let user = result?.user {
+                // O login foi bem-sucedido, salva o estado do usuário logado
+                UserDefaults.standard.set(user.uid, forKey: "loggedInUserID")
+                
+                // Redireciona para a tela principal
+                goToHomeView = true
+            }
+        }
+    }
+    
+    func checkIfUserIsLoggedIn() {
+        if let _ = UserDefaults.standard.string(forKey: "loggedInUserID") {
+            // Se o usuário estiver logado, vai para a tela inicial
+            goToHomeView = true
+        }
+    }
+    
+    
+    func signInOut() {
+        
+        do{
+            try Auth.auth().signOut()
+            // Remove o usuário do UserDefaults
+            UserDefaults.standard.removeObject(forKey: "loggedInUserID")
+            goToHomeView = true
+        } catch let error {
+            errorMessage = error.localizedDescription
+            showError = true
+        }
+    }
+    
+    
+    
 }
 
 #Preview {

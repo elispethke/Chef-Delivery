@@ -71,10 +71,10 @@ struct SplashView: View {
             .offset(x: viewModel.isActive ? -UIScreen.main.bounds.width : 0)
             .animation(.easeInOut(duration: 1), value: viewModel.isActive)
         }
-    
+        
         .fullScreenCover(isPresented: $viewModel.isActive){
             LoginScreen()
-                
+            
         }
     }
 }
