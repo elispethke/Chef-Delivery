@@ -6,7 +6,7 @@
 //
 
 import SwiftUI
-import FirebaseAuth
+
 
 struct LoginScreen: View {
     @State private var email: String = ""
@@ -124,49 +124,6 @@ struct LoginScreen: View {
             }
         }
     }
-    
-    // func for Authentication on Firebase
-    
-    func signIn() {
-        Auth.auth().signIn(withEmail: email, password: password) { result, error in
-            
-            if let error = error {
-                // If an error occurs, it displays the alert
-                errorMessage = error.localizedDescription
-                showError = true
-            } else if let user = result?.user {
-                // O login foi bem-sucedido, salva o estado do usuário logado
-                UserDefaults.standard.set(user.uid, forKey: "loggedInUserID")
-                
-                // Redireciona para a tela principal
-                goToHomeView = true
-            }
-        }
-    }
-    
-    func checkIfUserIsLoggedIn() {
-        if let _ = UserDefaults.standard.string(forKey: "loggedInUserID") {
-            // Se o usuário estiver logado, vai para a tela inicial
-            goToHomeView = true
-        }
-    }
-    
-    
-    func signInOut() {
-        
-        do{
-            try Auth.auth().signOut()
-            // Remove o usuário do UserDefaults
-            UserDefaults.standard.removeObject(forKey: "loggedInUserID")
-            goToHomeView = true
-        } catch let error {
-            errorMessage = error.localizedDescription
-            showError = true
-        }
-    }
-    
-    
-    
 }
 
 #Preview {

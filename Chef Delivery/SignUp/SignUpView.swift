@@ -6,8 +6,6 @@
 //
 
 import SwiftUI
-import FirebaseAuth
-import FirebaseFirestore
 
 struct SignUpView: View {
     @State private var name = ""
@@ -35,7 +33,7 @@ struct SignUpView: View {
                     .edgesIgnoringSafeArea(.all)
                     .opacity(0.7)
                 
-              
+                
                 VStack(alignment: .center, spacing: 20){
                     
                     Text("Register")
@@ -171,40 +169,11 @@ struct SignUpView: View {
             return
         }
         
-        // Create the user on Firebase Authentication
-        
-        Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            if let error = error {
-                errorMessage = "Error \(error.localizedDescription)"
-                return
-            }
-            
-            // Saving the additional data in Firestore
-            
-            let db = Firestore.firestore()
-            let userData = [
-                "name": name,
-                "email": email,
-                "address": address,
-                "post": post,
-                "city": city,
-                "country": country,
-                "phoneNumber": phoneNumber
-            ]
-            
-            db.collection("User").document(result!.user.uid).setData(userData) { error in
-                if let error = error {
-                    errorMessage = "Failed to save user data: \(error.localizedDescription)"
-                } else {
-                    // Seccesfull
-                    goToLogin = true
-                }
-                
-            }
-            
-        }
     }
+    
 }
+
+
 
 
 #Preview {

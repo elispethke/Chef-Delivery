@@ -1,0 +1,155 @@
+{
+  "" : {
+    "const-values" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/Chef Delivery-master.swiftconstvalues",
+    "dependencies" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/Chef Delivery-master.d",
+    "diagnostics" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/Chef Delivery-master.dia",
+    "emit-module-dependencies" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/Chef Delivery-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/Chef Delivery-master-emit-module.dia",
+    "swift-dependencies" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/Chef Delivery-master.swiftdeps"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/App/Chef_DeliveryApp.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/Chef_DeliveryApp.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/Chef_DeliveryApp.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/Chef_DeliveryApp.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/CarrouselView/CarrouselItemView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/CarrouselItemView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/CarrouselItemView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/CarrouselItemView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/CarrouselView/CarrouselTabView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/CarrouselTabView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/CarrouselTabView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/CarrouselTabView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/CarrouselViewModel/CarrouselViewModel.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/CarrouselViewModel.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/CarrouselViewModel.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/CarrouselViewModel.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/GridView/OrderTypeGridView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/OrderTypeGridView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/OrderTypeGridView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/OrderTypeGridView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/GridView/OrderTypeView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/OrderTypeView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/OrderTypeView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/OrderTypeView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/HomeSplashView/HomeView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/HomeView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/HomeView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/HomeView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/HomeSplashView/SplashView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/SplashView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/SplashView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/SplashView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/Model/DataSourceMock.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/DataSourceMock.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/DataSourceMock.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/DataSourceMock.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/Model/OrderType.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/OrderType.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/OrderType.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/OrderType.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/Model/ProductType.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/ProductType.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/ProductType.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/ProductType.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/Model/StoreType.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreType.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreType.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreType.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/NavigationBar/NavigationBar.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/NavigationBar.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/NavigationBar.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/NavigationBar.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/ProductView/ProductDetailButton.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/ProductDetailButton.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/ProductDetailButton.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/ProductDetailButton.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/ProductView/ProductDetailHeaderView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/ProductDetailHeaderView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/ProductDetailHeaderView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/ProductDetailHeaderView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/ProductView/ProductDetailQuantityView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/ProductDetailQuantityView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/ProductDetailQuantityView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/ProductDetailQuantityView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/ProductView/ProductDetailView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/ProductDetailView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/ProductDetailView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/ProductDetailView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/SignIn/LoginScreen.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/LoginScreen.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/LoginScreen.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/LoginScreen.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/SignUp/SignUpView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/SignUpView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/SignUpView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/SignUpView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/SplashViewModel/SplashViewModel.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/SplashViewModel.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/SplashViewModel.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/SplashViewModel.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/StoreView/StoreContainerView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreContainerView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreContainerView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreContainerView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/StoreView/StoreDetailView/StoreDetailView/StoreDateilHeaderView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreDateilHeaderView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreDateilHeaderView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreDateilHeaderView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/StoreView/StoreDetailView/StoreDetailView/StoreDetailProductItemView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreDetailProductItemView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreDetailProductItemView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreDetailProductItemView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/StoreView/StoreDetailView/StoreDetailView/StoreDetailProductsView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreDetailProductsView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreDetailProductsView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreDetailProductsView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/StoreView/StoreDetailView/StoreDetailView/StoreDetailView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreDetailView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreDetailView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreDetailView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/StoreView/StoreItemView.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreItemView.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreItemView.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreItemView.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/StoreViewModel/StoreViewModel.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreViewModel.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreViewModel.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/StoreViewModel.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/Chef Delivery/extension/Double+.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/Double+.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/Double+.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/Double+.o"
+  },
+  "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/elispethke/Desktop/Projetos/Alura/Chef Delivery/build/Chef Delivery.build/Release-iphoneos/Chef Delivery.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  }
+}
