@@ -14,7 +14,7 @@ enum RequestError: Error {
 
 struct HomeService {
     func fetchData() async -> Result<[StoreType], RequestError> {
-        guard let url = URL(string: "https://private-e643f3-elispethke.apiary-mock.com/home") else {
+        guard let url = URL(string: "https://private-e643f3-elispethke.apiary-mock.com/home" ) else {
             return .failure(.invalidURL)
         }
 

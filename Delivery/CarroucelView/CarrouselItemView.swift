@@ -12,10 +12,18 @@ struct CarrouselItemView: View {
     let order: OrderType
     
     var body: some View {
-        Image(order.image)
-            .resizable()
-            .scaledToFit()
-            .padding()
+        VStack{
+            Image(order.image)
+                .resizable()
+                .scaledToFit()
+                .frame(width: 350)
+                .clipped()
+                .clipShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
+                
+              
+        }
+        .padding()
+        .shadow(color: .black.opacity(0.6), radius: 8, x: 0, y: 7)
     }
 }
 

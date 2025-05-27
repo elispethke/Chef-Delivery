@@ -43,5 +43,5 @@ struct StoreDetailProductItemView: View {
 
 #Preview {
     let viewModel = StoreViewModel()
-    StoreDetailProductItemView(product: (viewModel.storeMock[0].product?[0])!)
+    StoreDetailProductItemView(product: (viewModel.storeMock[0].products?[0])!)
 }

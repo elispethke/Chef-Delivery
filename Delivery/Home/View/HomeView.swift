@@ -11,22 +11,43 @@ struct HomeView: View {
     private var service = HomeService()
     @State private var storesType : [StoreType] = []
     @State private var isLoading: Bool = true
+    @State private var searchText = ""
     
     var body: some View {
         
         NavigationView {
-            VStack {
-                NavigationBar()
+            TabView {
+                VStack {
+                    NavigationBar()
+                    
+                    ScrollView(.vertical, showsIndicators: false){
+                        VStack(spacing: 20){
+                            OrderTypeGridView()
+                            CarrouselTabView()
+                            StoreContainerView(stores: storesType)
+                            
+                        }
+                    }
+                    Spacer()
+                    
+                }
+                .tabItem({
+                    Image(systemName: "house")
+                    Text("Start")
+                })
                 
-                ScrollView(.vertical, showsIndicators: false){
-                    VStack(spacing: 20){
-                        OrderTypeGridView()
-                        CarrouselTabView()
-                        StoreContainerView(stores: storesType)
+                SearchStoreView(viewModel: SearchStoreViewModel(service: SearchService()))
+                    .tabItem {
+                        Image(systemName: "magnifyingglass")
+                        Text("Busca")
                         
                     }
-                }
             }
+            
+            
+            
+            
+            
             
             .foregroundStyle(colorScheme == .dark ? .white : .black)
         }

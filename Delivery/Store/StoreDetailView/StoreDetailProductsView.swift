@@ -21,7 +21,7 @@ struct StoreDetailProductsView: View {
                 .padding()
                 .foregroundStyle(colorScheme == .dark ? .white : .black)
 
-            ForEach(store.product!) { product in
+            ForEach(store.products!) { product in
                 Button {
                     selectedProduct = product
                 } label: {

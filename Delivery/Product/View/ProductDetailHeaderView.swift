@@ -44,5 +44,5 @@ struct ProductDetailHeaderView: View {
 
 #Preview {
     let viewModel = StoreViewModel()
-    ProductDetailHeaderView(product: (viewModel.storeMock[0].product?[0])!)
+    ProductDetailHeaderView(product: (viewModel.storeMock[0].products?[0])!)
 }

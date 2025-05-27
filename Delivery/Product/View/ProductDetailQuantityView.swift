@@ -21,10 +21,10 @@ struct ProductDetailQuantityView: View {
                         productQuantity -= 1
                     }
                 } label: {
-                    Image(systemName: "minus")
-                        .font(.system(size: 15))
+                    Image(systemName: "minus.circle.fill")                        .font(.system(size: 20))
                         .bold()
-                        .foregroundStyle(colorScheme == .dark ? .white : .black)
+                        .foregroundStyle(colorScheme == .dark ? .white : .colorOrange)
+                       
                 }
                 
                 Text("\(productQuantity)")
@@ -36,17 +36,18 @@ struct ProductDetailQuantityView: View {
                 Button {
                     productQuantity += 1
                 } label: {
-                    Image(systemName: "plus")
-                        .font(.system(size: 15))
+                    Image(systemName: "plus.circle.fill")
+                        .font(.system(size: 20))
                         .bold()
-                        .foregroundStyle(colorScheme == .dark ? .white : .black)
+                        .foregroundStyle(colorScheme == .dark ? .white : .colorOrange)
                 }
             }
             .padding()
+            
             .cornerRadius(12)
             .overlay(
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(Color.accentColor, lineWidth: 2)
+                RoundedRectangle(cornerRadius: 12)
+                    .stroke(Color.accentColor, lineWidth: 1)
             )
             .padding(.bottom,80)
         }

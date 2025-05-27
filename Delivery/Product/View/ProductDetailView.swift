@@ -20,8 +20,6 @@ struct ProductDetailView: View {
             VStack{
                 ProductDetailHeaderView(product: product)
                 
-                
-                
                 Spacer()
                 
                 ProductDetailQuantityView(productQuantity: $productQuantity)
@@ -62,5 +60,5 @@ struct ProductDetailView: View {
 
 #Preview {
     let viewModel = StoreViewModel()
-    ProductDetailView(product: viewModel.storeMock[0].product![0])
+    ProductDetailView(product: viewModel.storeMock[0].products![0])
 }

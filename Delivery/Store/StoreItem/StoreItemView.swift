@@ -16,7 +16,8 @@ struct StoreItemView: View {
             HStack(spacing: 16) {
                 StoreCard(store: store, colorScheme: colorScheme)
             }
-            .padding(.horizontal, 10)
+            .padding(.zero)
+            .padding()
         }
     }
 }
@@ -31,10 +32,10 @@ struct StoreCard: View {
             
             StoreDetails(store: store, colorScheme: colorScheme)
         }
-        .frame(width: 370, height: 280)
-        .background(colorScheme == .dark ? Color.black.opacity(0.1) : Color.white.opacity(0.2))
+        .frame(width: 350, height: 280)
+        .background(colorScheme == .dark ? Color.black : Color.white)
         .cornerRadius(20)
-        .shadow(color: colorScheme == .dark ? Color.white.opacity(0.4) : Color.black.opacity(0.4), radius: 2, x: 1, y: 2)
+        .shadow(color: colorScheme == .dark ? Color.white : Color.black, radius: 2, x: 2, y: 2)
     }
 }
 
@@ -62,6 +63,7 @@ struct StoreDetails: View {
             Text(store.name)
                 .fontWeight(.bold)
                 .foregroundStyle(colorScheme == .dark ? .white : .black)
+                .padding(.leading, -30)
             
             StoreRating(stars: store.stars)
             
@@ -70,7 +72,8 @@ struct StoreDetails: View {
                 Text("\(String(format: "%.1f", store.rating!)) (\(((store.reviewCount ??  200) != 0) ? "200+" : "\(store.reviewCount)"))")
             }
             .font(.system(size: 15))
-            .padding(.leading, 2)
+            .padding(.leading, -30)
+            
             
             StoreDeliveryInfo(store: store)
             
@@ -89,8 +92,12 @@ struct StoreRating: View {
                 Image(systemName: "star.fill")
                     .foregroundStyle(Color.accentColor)
                     .font(.system(size: 10))
+                    
+                    
+                   
             }
         }
+        .padding(.leading, -30)
     }
 }
 
@@ -104,6 +111,7 @@ struct StoreDeliveryInfo: View {
             
             Text(store.deliveryPrice == 0 ? "Free delivery" : "Delivery: €\(String(format: "%.2f", store.deliveryPrice!))")
                 .foregroundStyle(Color.white)
+               
         }
         .padding(.vertical, 5)
         .padding(.horizontal, 12)
@@ -115,21 +123,18 @@ struct StoreDeliveryInfo: View {
 
 struct StoreTimeInfo: View {
     let time: String
-   
-    
     var body: some View {
         HStack {
             Image(systemName: "clock")
                 .foregroundStyle(Color.gray)
                 .font(.system(size: 15))
-                .padding(.top, 10)
+                .padding(.leading, -30)
             
             Text(time)
                 .font(.system(size: 15))
                 .foregroundStyle(Color.gray)
-                .padding(.top, 10)
-            
-           
+                .padding(.top, 1)
+                .padding(.leading, -20)
         }
         .padding(.bottom, 5)
     }
