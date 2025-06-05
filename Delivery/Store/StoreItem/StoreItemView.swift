@@ -32,10 +32,10 @@ struct StoreCard: View {
             
             StoreDetails(store: store, colorScheme: colorScheme)
         }
-        .frame(width: 350, height: 280)
-        .background(colorScheme == .dark ? Color.black : Color.white)
+        .frame(width: 350, height: 260)
+        .background(colorScheme == .dark ? Color.black : Color.brancoGelo)
         .cornerRadius(20)
-        .shadow(color: colorScheme == .dark ? Color.white : Color.black, radius: 2, x: 2, y: 2)
+        .shadow(color: colorScheme == .dark ? Color.white : Color.black, radius: 1, x: 0, y: 0)
     }
 }
 
@@ -50,7 +50,7 @@ struct StoreImage: View {
                 .frame(width: geometry.size.width, height: geometry.size.height)
                 .clipped()
         }
-        .frame(height: 150)
+        .frame(height: 160)
     }
 }
 
@@ -63,7 +63,7 @@ struct StoreDetails: View {
             Text(store.name)
                 .fontWeight(.bold)
                 .foregroundStyle(colorScheme == .dark ? .white : .black)
-                .padding(.leading, -30)
+                .padding(.leading, 5)
             
             StoreRating(stars: store.stars)
             
@@ -72,12 +72,14 @@ struct StoreDetails: View {
                 Text("\(String(format: "%.1f", store.rating!)) (\(((store.reviewCount ??  200) != 0) ? "200+" : "\(store.reviewCount)"))")
             }
             .font(.system(size: 15))
-            .padding(.leading, -30)
+            .padding(.leading, 5)
             
-            
-            StoreDeliveryInfo(store: store)
-            
-            StoreTimeInfo(time: store.deliveryTime!)
+            HStack{
+                StoreDeliveryInfo(store: store)
+                
+                StoreTimeInfo(time: store.deliveryTime!)
+            }
+            .padding(.bottom, 1)
         }
         .padding(.horizontal)
     }
@@ -97,7 +99,7 @@ struct StoreRating: View {
                    
             }
         }
-        .padding(.leading, -30)
+        .padding(.leading, 10)
     }
 }
 
@@ -107,15 +109,15 @@ struct StoreDeliveryInfo: View {
     var body: some View {
         HStack {
             Image(systemName: "bicycle")
-                .foregroundStyle(Color.white)
+                .foregroundStyle(Color.accent)
             
             Text(store.deliveryPrice == 0 ? "Free delivery" : "Delivery: €\(String(format: "%.2f", store.deliveryPrice!))")
-                .foregroundStyle(Color.white)
+                .foregroundStyle(Color.accent)
                
         }
         .padding(.vertical, 5)
         .padding(.horizontal, 12)
-        .background(Color.accentColor)
+        //.background(Color.accentColor)
         .cornerRadius(12)
         .padding(.horizontal, 40)
     }
@@ -126,17 +128,17 @@ struct StoreTimeInfo: View {
     var body: some View {
         HStack {
             Image(systemName: "clock")
-                .foregroundStyle(Color.gray)
+                .foregroundStyle(Color.accent)
                 .font(.system(size: 15))
                 .padding(.leading, -30)
             
             Text(time)
                 .font(.system(size: 15))
-                .foregroundStyle(Color.gray)
-                .padding(.top, 1)
+                .foregroundStyle(Color.accent)
+                .padding(.top, 2)
                 .padding(.leading, -20)
         }
-        .padding(.bottom, 5)
+        .padding(.bottom, 2)
     }
     
     

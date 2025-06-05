@@ -10,8 +10,9 @@ import SwiftUI
 struct StoreDetailProductsView: View {
     
     let store: StoreType
-    @Environment(\.colorScheme) var colorScheme
+    @ObservedObject var cartViewModel: CartViewModel
     @State private var selectedProduct: ProductType?
+    @State var productQuantity = 1
     
     var body: some View {
         VStack(alignment: .leading){
@@ -19,24 +20,30 @@ struct StoreDetailProductsView: View {
                 .font(.title)
                 .bold()
                 .padding()
-                .foregroundStyle(colorScheme == .dark ? .white : .black)
-
+            
             ForEach(store.products!) { product in
                 Button {
                     selectedProduct = product
                 } label: {
                     StoreDetailProductItemView(product: product)
                 }
-                .sheet(item: $selectedProduct) { product in
-                    ProductDetailView(product: product)
-                }
             }
-            
         }
-    }
-}
-
+        .sheet(item: $selectedProduct) { product in
+            ProductDetailView(
+                product: product,
+                cartViewModel: cartViewModel
+                 )
+                    }
+               
+        }
+              
+        }
+                
+                
 #Preview {
-    let viewModel = StoreViewModel()
-    StoreDetailProductsView(store: viewModel.storeMock[0])
-}
+let cartViewModel = CartViewModel()
+let viewModel = StoreViewModel()
+StoreDetailProductsView(store: viewModel.storeMock[0],
+        cartViewModel: CartViewModel())
+    }

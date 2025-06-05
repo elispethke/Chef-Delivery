@@ -10,6 +10,7 @@ import SwiftUI
 struct StoreContainerView: View {
     @StateObject var viewModel = StoreViewModel()
     @Environment(\.colorScheme) var colorScheme
+    @ObservedObject var cartViewModel: CartViewModel
     
     var stores: [StoreType]
    
@@ -65,7 +66,7 @@ struct StoreContainerView: View {
             } else {
                 ForEach(viewModel.filteredStores, id: \.id) { store in
                     NavigationLink {
-                        StoreDetailView(store: store)
+                        StoreDetailView(store: store, cartViewModel: cartViewModel)
                     } label: {
                         StoreItemView(store: store)
                     }
@@ -84,5 +85,6 @@ struct StoreContainerView: View {
 }
 
 #Preview {
-    StoreContainerView(stores: storesMock)
+    let cartViewModel = CartViewModel()
+    StoreContainerView(cartViewModel: CartViewModel(), stores: storesMock)
 }

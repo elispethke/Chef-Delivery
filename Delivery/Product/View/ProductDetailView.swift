@@ -4,7 +4,6 @@
 //
 //  Created by Elis Pethke on 01/04/25.
 //
-
 import SwiftUI
 
 struct ProductDetailView: View {
@@ -14,6 +13,7 @@ struct ProductDetailView: View {
     @State private var selectedExtras: Set<String> = []
     @Environment(\.colorScheme) var colorScheme
     var service = HomeService()
+    @ObservedObject var cartViewModel: CartViewModel
     
     var body: some View {
         ZStack{
@@ -32,19 +32,21 @@ struct ProductDetailView: View {
                 
                 Spacer()
                 
-                ProductDetailButton{
+                ProductDetailButton {
                     Task {
+                        let item = CartItem(name: product.name, price: product.price, quantity: productQuantity)
+                        cartViewModel.addToCart(item: item)
                         await confirOrder()
+                        
                     }
                 }
                 .padding(.bottom,40)
-                
             }
         }
     }
     
     func confirOrder() async {
-        do{
+        do {
             let result = try await service.confirmOrder(product: product)
             switch result {
             case .success(let message):
@@ -52,7 +54,7 @@ struct ProductDetailView: View {
             case .failure(let error):
                 print(error.localizedDescription)
             }
-        } catch{
+        } catch {
             print(error.localizedDescription)
         }
     }
@@ -60,5 +62,6 @@ struct ProductDetailView: View {
 
 #Preview {
     let viewModel = StoreViewModel()
-    ProductDetailView(product: viewModel.storeMock[0].products![0])
+    let cartViewModel = CartViewModel()
+    ProductDetailView(product: viewModel.storeMock[0].products![0], cartViewModel: CartViewModel())
 }

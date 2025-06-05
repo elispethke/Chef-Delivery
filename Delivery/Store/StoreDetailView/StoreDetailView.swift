@@ -12,13 +12,14 @@ struct StoreDetailView: View {
     @Environment(\.presentationMode) var presentationMode
     @State private var selectedProduct: ProductType?
     @Environment(\.colorScheme) var colorScheme
+    @ObservedObject var cartViewModel: CartViewModel
     
     
     var body: some View {
         ScrollView {
                   VStack(alignment: .leading) {
                       StoreDateilHeaderView(store: store)
-                      StoreDetailProductsView(store:store)
+                      StoreDetailProductsView(store:store, cartViewModel: cartViewModel)
 
                      
                   }
@@ -45,6 +46,7 @@ struct StoreDetailView: View {
       }
         
 #Preview {
+    let cartViewModel = CartViewModel()
     let viewModel = StoreViewModel()
-    StoreDetailView(store: viewModel.storeMock[0])
+    StoreDetailView(store: viewModel.storeMock[0], cartViewModel: CartViewModel())
 }

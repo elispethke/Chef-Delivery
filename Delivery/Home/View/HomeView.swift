@@ -13,6 +13,8 @@ struct HomeView: View {
     @State private var isLoading: Bool = true
     @State private var searchText = ""
     
+    @StateObject var cartViewModel = CartViewModel()
+    
     var body: some View {
         
         NavigationView {
@@ -22,9 +24,10 @@ struct HomeView: View {
                     
                     ScrollView(.vertical, showsIndicators: false){
                         VStack(spacing: 20){
+                            
                             OrderTypeGridView()
                             CarrouselTabView()
-                            StoreContainerView(stores: storesType)
+                            StoreContainerView(cartViewModel: cartViewModel, stores: storesType)
                             
                         }
                     }
@@ -42,12 +45,14 @@ struct HomeView: View {
                         Text("Busca")
                         
                     }
+                
+                CartView(viewModel: cartViewModel)
+                    .tabItem {
+                        Image(systemName: "cart")
+                              Text("Cart")
+                    }
+                    .badge(cartViewModel.items.count)
             }
-            
-            
-            
-            
-            
             
             .foregroundStyle(colorScheme == .dark ? .white : .black)
         }
