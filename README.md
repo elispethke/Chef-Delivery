@@ -63,7 +63,7 @@ Contributions are welcome! Feel free to submit a pull request or open an issue.
 
 #### Screenshots
 
-![Home Screen](https://imgur.com/s8XPLvA)
+![Home Screen](https://imgur.com/s8XPLvA.png)
 ![Home Screen](https://i.imgur.com/uPFhvFq.png)
 
 
