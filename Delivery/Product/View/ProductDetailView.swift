@@ -10,14 +10,14 @@ struct ProductDetailView: View {
     
     let product: ProductType
     @State var productQuantity = 1
-    @State private var selectedExtras: Set<String> = []
     @Environment(\.colorScheme) var colorScheme
     var service = HomeService()
     @ObservedObject var cartViewModel: CartViewModel
+    @Binding var isPresented: Bool
     
     var body: some View {
-        ZStack{
-            VStack{
+        ZStack {
+            VStack {
                 ProductDetailHeaderView(product: product)
                 
                 Spacer()
@@ -28,7 +28,7 @@ struct ProductDetailView: View {
                     .font(.headline)
                     .foregroundStyle(Color.red)
                     .bold()
-                    .padding(.bottom,30)
+                    .padding(.bottom, 30)
                 
                 Spacer()
                 
@@ -37,10 +37,25 @@ struct ProductDetailView: View {
                         let item = CartItem(name: product.name, price: product.price, quantity: productQuantity)
                         cartViewModel.addToCart(item: item)
                         await confirOrder()
-                        
+                        isPresented = false
                     }
                 }
-                .padding(.bottom,40)
+                .padding(.bottom, 40)
+            }
+            
+            VStack {
+                HStack {
+                    Spacer()
+                    Button {
+                        isPresented = false
+                    } label: {
+                        Image(systemName: "xmark.circle.fill")
+                            .font(.system(size: 28))
+                            .foregroundStyle(.gray)
+                            .padding()
+                    }
+                }
+                Spacer()
             }
         }
     }
@@ -60,8 +75,9 @@ struct ProductDetailView: View {
     }
 }
 
+
 #Preview {
     let viewModel = StoreViewModel()
     let cartViewModel = CartViewModel()
-    ProductDetailView(product: viewModel.storeMock[0].products![0], cartViewModel: CartViewModel())
+    ProductDetailView(product: viewModel.storeMock[0].products![0], cartViewModel: CartViewModel(), isPresented: .constant(false))
 }

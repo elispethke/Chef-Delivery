@@ -9,73 +9,137 @@ import XCTest
 @testable import Delivery
 
 final class SearchStoreViewModelTexts: XCTestCase {
-  
+    
     // MARK: - Attributes
     
-    // Sut significa SytermUnderTest
+    // SUT = System Under Test
     var sut: SearchStoreViewModel!
     
-    // MARK: -  Setup
+    // MARK: - Setup
+    
     @MainActor
     override func setUpWithError() throws {
-      // aqui é para iniciar uma variavel antes de cada teste de Unidade
+        // Inicializa a variável antes de cada teste
+        sut = SearchStoreViewModel(service: SearchService())
         
-      sut = SearchStoreViewModel(service: SearchService())
-    }
-
-    override func tearDownWithError() throws {
-        
-    }
-
-    @MainActor
-    func testFilteredStores() throws {
         sut.storeType = [StoreType(id: 1,
                                    name: "Monstro Burger",
                                    logoImage: nil,
                                    headerImage: nil,
-                                   location: "",
-                                   stars: 4,
-                                   deliveryTime: "",
-                                   rating: 25,
-                                   reviewCount: 3,
+                                   location: "Franfurter Allee 90",
+                                   stars: 4, deliveryTime: "",
+                                   rating: 3,
+                                   reviewCount: nil,
                                    products: [],
-                                   specialties: [""],
-                                   deliveryPrice: 25),
-                         
-                         StoreType(id: 2,
-                                   name: "Food Court",
-                                   logoImage: nil,
-                                   headerImage: nil,
-                                   location: "",
-                                   stars: 6,
-                                   deliveryTime: "",
-                                   rating: 20,
-                                   reviewCount: 5,
-                                   products: [],
-                                   specialties: [""],
-                                   deliveryPrice: 23),
-                         
-                         StoreType(id: 3,
-                                   name: "Carbron",
-                                   logoImage: nil,
-                                   headerImage: nil,
-                                   location: "",
-                                   stars: 7,
-                                   deliveryTime: nil,
-                                   rating: 23,
-                                   reviewCount: 4,
-                                   products: [],
-                                   specialties: [""],
-                                   deliveryPrice: 12)
-        ]
+                                   specialties: ["burger, hamburger"],
+                                   deliveryPrice: 12),
+        StoreType(id: 2,
+                  name: "Food Court",
+                  logoImage: nil,
+                  headerImage: nil,
+                  location: "AlexanderPlatz 123",
+                  stars: 5,
+                  deliveryTime: nil,
+                  rating: 4,
+                  reviewCount: 300,
+                  products: [],
+                  specialties: ["pizza,pasta"],
+                  deliveryPrice: 8),
+        StoreType(id: 3,
+                  name: "Carbron",
+                  logoImage: nil,
+                  headerImage: nil,
+                  location: "Weicheselstrasse 40",
+                  stars: 3,
+                  deliveryTime: "",
+                  rating: 5,
+                  reviewCount: nil,
+                  products: [],
+                  specialties: ["tacos, mexico"],
+                  deliveryPrice: 13),
+        StoreType(id: 4,
+                  name: "Sushi",
+                  logoImage: nil,
+                  headerImage: nil,
+                  location: "Samaritastrasse 49",
+                  stars: 4,
+                  deliveryTime: nil,
+                  rating: 30,
+                  reviewCount: 40,
+                  products: [],
+                  specialties: ["sushi,asian food"],
+                  deliveryPrice: 14),
+       ]
         
+    }
+    
+    override func tearDownWithError() throws {
+        // Cleanup se necessário
+    }
+    
+    @MainActor
+    func testFilteredStores() throws {
         sut.searchText = "Car"
         
-        let filteredStores =  try sut.filteredStores()
+        var filteredStores:[StoreType] = []
+        
+        do{
+            filteredStores = try sut.filteredStores()
+            XCTAssertEqual(1, filteredStores.count)
+            XCTAssertEqual("Carbron", filteredStores[0].name)
+        } catch{
+            XCTFail("Failed to seach store")
+        }
+        
+        /*
+        let filteredStores = try sut.filteredStores()
         
         XCTAssertEqual(1, filteredStores.count)
         XCTAssertEqual("Carbron", filteredStores[0].name)
+         
+         */
+    }
+    
+    @MainActor
+    func testFilteredStoresWithSpecialCharactersInSearchText() throws {
+        var filteredStores: [StoreType] = []
+        
+        sut.searchText = "!@#$%&"
+        
+        do {
+            filteredStores = try sut.filteredStores()
+            XCTFail("Failed to search")
+            
+        } catch {
+            XCTAssertTrue(filteredStores.isEmpty)
+        }
+    }
+    
+    @MainActor
+    func testFilteredStoresUsingTerm() {
+        
+        sut.searchText = "pizza"
+        
+        var filteredStores: [StoreType] = []
+        
+        do{
+            filteredStores = try sut.filteredStores()
+            XCTAssertEqual(1, filteredStores.count)
+            XCTAssertEqual("Food Court", filteredStores[0].name)
+        } catch{
+            XCTFail("Faliled to search")
+        }
         
     }
-
+    
+    @MainActor
+    func testFilteredStoresException() {
+        
+        // Aqui vai testa a excessao
+        
+        sut.searchText = "xxZZz"
+        XCTAssertThrowsError(try sut.filteredStores())
+        
+    }
+    
 }

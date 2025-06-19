@@ -48,11 +48,13 @@ struct StoreType: Identifiable, Decodable {
     }
 }
 
-extension String: Searchable {
-    func matches(query: String) -> Bool {
-        return self.lowercased().contains(query.lowercased())
-    }
-}
+/*
+ extension String: Searchable {
+     func matches(query: String) -> Bool {
+         return self.lowercased().contains(query.lowercased())
+     }
+ }
+ */
 
 extension StoreType: Searchable {
     func matches(query: String) -> Bool {

@@ -16,7 +16,7 @@ struct EditAddressView: View {
     let onAddressUpdated: (String) -> Void
 
     var body: some View {
-        NavigationView{
+        NavigationStack{
                 VStack(spacing: 16){
                     
                     HStack{

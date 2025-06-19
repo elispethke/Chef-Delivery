@@ -47,13 +47,14 @@ struct SearchStoreView: View {
                                 .padding(.horizontal, 20)
                                 .padding(.bottom, 30)
                         }
+                    
                     } else {
                         VStack(alignment: .center) {
                             Spacer()
                             Image(systemName: "magnifyingglass")
                                 .resizable()
                                 .aspectRatio(contentMode: .fit)
-                                .foregroundColor(.gray)
+                                .foregroundColor(.accentColor)
                                 .padding(.top, 50)
                                 .frame(height: 100)
                                 .frame(maxWidth: .infinity)

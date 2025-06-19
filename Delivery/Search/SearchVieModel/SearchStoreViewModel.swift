@@ -7,8 +7,9 @@
 
 import Foundation
 
-enum SearchError: Error {
+enum SearchError: Error, Equatable {
     case noResultsFound
+    case networkFailure
 }
 
 @MainActor
@@ -50,15 +51,17 @@ class SearchStoreViewModel: ObservableObject {
             return storeType
         }
         
-        let filteredList = storeType.filter {
-            $0.matches(query: searchText.lowercased())
-        }
+         let filteredList = storeType.filter {
+         $0.matches(query: searchText.lowercased())
+         }
+         
+         if filteredList.isEmpty {
+         throw SearchError.noResultsFound
+         }
+         
+         return filteredList
         
-        if filteredList.isEmpty {
-            throw SearchError.noResultsFound
-        }
         
-        return filteredList
     }
 }
 

@@ -31,7 +31,10 @@ struct OrderTypeView: View {
         .padding(.top,45)
         .background(
             RoundedRectangle(cornerRadius: 10)
-                .fill(Color(.systemBackground))
+                .fill(
+                    colorSheme == .dark ? Color.darkGray.opacity(0.5) : Color.white
+                )
+
                 .shadow(color: .black.opacity(0.5), radius: 6, x: 0, y: 7)
                 .frame(width: 80,height: 80)
                 

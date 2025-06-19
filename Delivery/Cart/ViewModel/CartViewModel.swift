@@ -11,6 +11,16 @@ import Foundation
 class CartViewModel: ObservableObject{
     @Published var items: [CartItem] = []
     
+    var totalItems: Int {
+        items.reduce(0){ $0 + $1.quantity }
+        
+        
+    }
+    
+    var totalPrice: Double {
+        items.reduce(0) { $0 + ($1.price * Double($1.quantity)) }
+    }
+    
     func addToCart(item: CartItem) {
         if let index = items.firstIndex(where: { $0.name == item.name }){
             items[index].quantity += item.quantity
@@ -28,9 +38,22 @@ class CartViewModel: ObservableObject{
     }
     
     func updateQuantity(for item: CartItem, quantity: Int) {
-        guard let index = items.firstIndex(where: { $0.id == item.id }) else { return}
+        guard let index = items.firstIndex(where: { $0.id == item.id }) else { return }
         items[index].quantity = max(quantity, 1)
-            
-        
     }
+    
+    func incrementQuantity(for item: CartItem){
+        guard let index = items.firstIndex(where: { $0.id == item.id }) else{return}
+        items[index].quantity += 1
+    }
+    
+    func decrementQuantity(for item: CartItem) {
+            guard let index = items.firstIndex(where: { $0.id == item.id }) else { return }
+            if items[index].quantity > 1 {
+                items[index].quantity -= 1
+            } else {
+                removeFromCart(item: item)
+            }
+        }
+
 }

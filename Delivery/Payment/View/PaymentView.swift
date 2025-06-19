@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct PaymenView: View {
+struct PaymentView: View {
     @Environment(\.dismiss) var dismiss
     
     enum paymentMethod: String, CaseIterable, Identifiable {
@@ -51,5 +51,5 @@ struct PaymenView: View {
 }
 
 #Preview {
-    PaymenView()
+    PaymentView()
 }

@@ -41,6 +41,7 @@ struct StoreCard: View {
 
 struct StoreImage: View {
     let imageName: String
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         GeometryReader { geometry in
@@ -49,6 +50,7 @@ struct StoreImage: View {
                 .scaledToFill()
                 .frame(width: geometry.size.width, height: geometry.size.height)
                 .clipped()
+              
         }
         .frame(height: 160)
     }
